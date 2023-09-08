@@ -12,6 +12,7 @@ def api(request):
     response = {
         "slack_name" : slack_name,
         "current_day": day_of_the_week,
+        "utc_time": utc_time,
         "track" : track,
         "github_file_url" : "https://github.com/Oghenekevbe/HNG1/blob/main/assignment1/views.py",
         "github_repo_url" : "https://github.com/Oghenekevbe/HNG1",
