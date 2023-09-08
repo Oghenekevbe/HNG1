@@ -7,7 +7,7 @@ def api(request):
     slack_name =  request.GET.get('slack_name', '')
     track =  request.GET.get('track', '')
 
-    utc_time = datetime.utcnow()
+    utc_time = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
     day_of_the_week = utc_time.strftime('%A')
     response = {
         "slack_name" : slack_name,
