@@ -3,7 +3,7 @@ from datetime import datetime
 
 # Create your views here.
 
-def api_endpoint(request):
+def api(request):
     slack_name =  request.GET.get('slack_name', '')
     track =  request.GET.get('track', '')
 
