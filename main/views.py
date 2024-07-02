@@ -25,7 +25,6 @@ class HelloView(APIView):
         # Get the client's location based on the IP address
         client_location = handler.getDetails(client_ip)
         city = client_location.city
-        print('city = ', city)
 
         # Get weather data from OpenWeatherMap
         weather_url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={OPENWEATHERMAP_API_KEY}&units=metric"
