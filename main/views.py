@@ -1,12 +1,13 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 from django.http import JsonResponse
+from django.conf import settings
 import public_ip as ip
 import ipinfo
 import requests
 
-OPENWEATHERMAP_API_KEY = '3399b556c2d716eb276740e0094f39c7'
-access_token = 'a66a244ac36a36'
+OPENWEATHERMAP_API_KEY = settings['OPENWEATHERMAP_API_KEY']
+access_token = settings['access_token']
 handler = ipinfo.getHandler(access_token)
 
 class HelloView(APIView):
